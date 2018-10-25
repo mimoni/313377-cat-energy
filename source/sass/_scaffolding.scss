@@ -1,0 +1,18 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-arial;
+  color: $color-primary-text;
+  font-style: normal;
+
+  background-color: $bg-white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
