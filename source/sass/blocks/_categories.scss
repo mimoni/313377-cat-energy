@@ -1,5 +1,10 @@
 .categories__list {
   @include list-reset;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .categories__item {
@@ -13,6 +18,12 @@
     padding-right: 270px;
     padding-left: 50px;
     padding-bottom: 60px;
+  }
+
+  @include desktop {
+    &:first-child {
+      margin-right: 80px;
+    }
   }
 }
 

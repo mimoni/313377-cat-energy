@@ -2,6 +2,10 @@
   position: relative;
   width: 320px;
   height: 240px;
+
+  @include tablet {
+    margin: 0 auto;
+  }
 }
 
 .slider_image {

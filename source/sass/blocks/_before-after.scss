@@ -1,6 +1,22 @@
 .before-after {
   padding-top: 10px;
   background-color: $bg-lightgrey;
+
+  @include tablet {
+    background-image: linear-gradient(to top, $bg-lightgrey 460px, $bg-white 460px);
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+  }
+}
+
+.before-after__text {
+  @include tablet {
+    margin-bottom: 55px;
+  }
 }
 
 .before-after__results {
@@ -10,10 +26,21 @@
   align-items: center;
 }
 
+.before-after__wrapper-results {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .before-after__item {
   position: relative;
   border-radius: 3px;
   border: 1px solid #cdcdcd;
+
+  @include tablet {
+    margin-right: 40px;
+  }
 }
 
 .before-after__result {
@@ -42,6 +69,14 @@
   left: 50%;
   bottom: -16px;
   transform: translateX(-50%);
+
+  @include tablet {
+    background-color: $bg-white;
+  }
+
+  @include desktop {
+    background-color: $bg-lightgrey;
+  }
 }
 
 .before-after__list {
@@ -55,8 +90,49 @@
   text-align: center;
   margin-top: 36px;
   font-family: $font-oswald;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    width: 190px;
+  }
 }
 
 .before-after__slider {
   margin-top: 46px;
+
+  @include desktop {
+    flex-grow: 1;
+  }
+}
+
+.before-after__col-left {
+
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @include tablet {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 708px;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 0;
+    margin-right: 40px;
+    width: 570px;
+  }
+}
+
+.before-after__wrapper {
+  @include desktop {
+    display: flex;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 1220px;
+  }
 }
