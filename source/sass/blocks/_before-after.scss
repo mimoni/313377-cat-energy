@@ -1,0 +1,62 @@
+.before-after {
+  padding-top: 10px;
+  background-color: $bg-lightgrey;
+}
+
+.before-after__results {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.before-after__item {
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+}
+
+.before-after__result {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-oswald;
+  text-transform: uppercase;
+  text-align: center;
+  width: 122px;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.before-after__caption {
+  font-size: 12px;
+  line-height: 12px;
+  width: 87px;
+  position: absolute;
+  display: inline-block;
+  background-color: $bg-lightgrey;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%);
+}
+
+.before-after__list {
+  @include list-reset;
+}
+
+.before-after__cost {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 36px;
+  font-family: $font-oswald;
+}
+
+.before-after__slider {
+  margin-top: 46px;
+}

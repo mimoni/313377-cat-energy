@@ -1,0 +1,79 @@
+.page-footer {
+  background-color: $bg-lightgrey;
+}
+
+.page-footer__contacts-wrap {
+  background-color: $bg-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-footer__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-footer__bg-wrap {
+  width: 100%;
+  background-color: $bg-white;
+}
+
+.page-footer__contacts {
+  padding-top: 30px;
+  padding-bottom: 22px;
+  display: flex;
+}
+
+.page-footer__slogan {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: $font-oswald;
+  color: $color-secondary-text;
+  width: 50%;
+}
+
+.page-footer__address {
+  width: 50%;
+}
+
+.page-footer__map {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 55px;
+    height: 53px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.page-footer__logo-link {
+  display: block;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 31px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__logo-link {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.page-footer__map-image {
+  display: block;
+}

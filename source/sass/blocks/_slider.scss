@@ -1,0 +1,60 @@
+.slider__images {
+  position: relative;
+  width: 320px;
+  height: 240px;
+}
+
+.slider_image {
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 240px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &--right {
+    background-image: url("../img/before-mobile@1x.png");
+  }
+}
+
+.slider__range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  padding-bottom: 40px;
+}
+
+.slider__label {
+  font-family: $font-oswald;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.slider__line {
+  display: flex;
+  align-items: center;
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.slider__fill {
+  background-color: #68b738;
+  width: 50%;
+  height: 6px;
+  line-height: 14px;
+  border-radius: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  box-sizing: border-box;
+}
+
+.slider_pin {
+  display: none;
+}
