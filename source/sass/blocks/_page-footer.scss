@@ -3,9 +3,15 @@
 }
 
 .page-footer__wrap {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__bg-wrap {

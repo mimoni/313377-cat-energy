@@ -7,17 +7,15 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<header class="page-header">
+<header class="page-header container">
   <a class="page-header__logo-link" href="#">
-    <img class="page-header__logo-icon" src="http://placehold.it/33x38" alt="Cat Energy" width="33" height="38">
-  </a>
-
-  <a class="page-header__logo-link" href="#">
-    <img class="page-header__logo-image" src="http://placehold.it/110x24" alt="Cat Energy" width="110" height="24">
+    <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy" width="190" height="38">
   </a>
 
   <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
 
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
@@ -35,7 +33,7 @@
   </nav>
 </header>
 
-<main class="page-main">
+<main class="page-main container">
   <section class="selection">
     <h1 class="selection__title">Подбор программы</h1>
     <p class="selection__slogan">Заполните анкету и мы подберем программу питания для вашего кота</p>
@@ -111,41 +109,50 @@
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__contacts">
-    <div class="page-footer__slogan">
-      Приглашаем к сотрудничеству дилеров!
+  <div class="page-footer__map">
+    <div class="page-footer__contacts-wrap">
+      <div class="page-footer__contacts">
+        <div class="page-footer__slogan">
+          Приглашаем к сотрудничеству дилеров!
+        </div>
+        <div class="page-footer__address">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </div>
+      </div>
     </div>
-    <div class="page-footer__address">
-      ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-    </div>
-    <img class="page-footer__map" src="http://placehold.it/320x400" alt="Карта" width="320" height="400">
+
+    <img class="page-footer__map-image" src="img/bg-map-mobile@1x.png" alt="Карта" width="320" height="400">
   </div>
 
-  <a class="page-footer__logo-link" href="#">
-    <img class="page-footer__logo-image" src="http://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
-  </a>
+  <div class="page-footer__bg-wrap">
+    <div class="container page-footer__wrap">
+      <a class="page-footer__logo-link" href="#">
+        <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
+      </a>
 
-  <div class="page-footer__social social">
-    <ul class="social__list">
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="#">Мы в Вконтакте</a>
-      </li>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Мы в Вконтакте</span></a>
+          </li>
 
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
-      </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
+          </li>
 
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
-      </li>
-    </ul>
-  </div>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+          </li>
+        </ul>
+      </div>
 
-  <div class="page-footer__copyright copyright">
-    <p class="copyright__text">HTML Academy</p>
-    <a href="#" class="copyright__logo-link">
-      <img class="copyright__logo-image" src="http://placehold.it/27x34" alt="HTML Academy" width="27" height="34">
-    </a>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">HTML Academy</p>
+        <a href="#" class="copyright__logo-link">
+          <img class="copyright__logo-image" src="img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
 </body>
