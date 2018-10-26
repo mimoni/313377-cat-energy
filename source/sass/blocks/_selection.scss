@@ -1,0 +1,16 @@
+.selection__slogan {
+  font-family: $font-oswald;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  @include tablet {
+    padding-left: 40px;
+    width: 342px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    padding-left: 0;
+  }
+}

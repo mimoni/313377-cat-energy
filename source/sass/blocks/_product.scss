@@ -1,0 +1,22 @@
+.product {
+  flex-wrap: wrap;
+
+  @include tablet {
+    background-color: $bg-lightgrey;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 40px;
+  }
+}
+
+.product__buy {
+  max-width: 100%;
+}
+
+.product__name {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-secondary-text;
+  font-family: $font-oswald;
+}

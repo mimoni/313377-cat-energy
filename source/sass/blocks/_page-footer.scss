@@ -16,11 +16,10 @@
 
 .page-footer__bg-wrap {
   width: 100%;
-  background-color: $bg-white;
+  background-color: $bg-lightgrey;
 }
 
 .page-footer__contacts-wrap {
-  background-color: $bg-white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,6 +32,10 @@
     z-index: 10;
     position: relative;
     top: 95px;
+  }
+
+  .page-index & {
+    background-color: $bg-white;
   }
 }
 
