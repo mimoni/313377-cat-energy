@@ -10,6 +10,11 @@ body {
   font-style: normal;
 
   background-color: $bg-white;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 img {

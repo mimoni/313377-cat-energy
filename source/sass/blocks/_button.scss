@@ -1,0 +1,26 @@
+.button {
+  width: 100%;
+  max-width: 280px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $color-button;
+  color: $color-button-text;
+  font-family: $font-oswald;
+  font-weight: normal;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &:active {
+    color: $color-button-text-hover;
+    background-color: $color-button-active;
+  }
+}

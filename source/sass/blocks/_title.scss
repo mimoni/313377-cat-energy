@@ -1,0 +1,52 @@
+.title {
+  font-size: 36px;
+  font-family: $font-oswald;
+  font-weight: normal;
+  line-height: 36px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 70px;
+  }
+
+  &--white-bg {
+    font-size: 24px;
+    line-height: 24px;
+    display: inline-block;
+    background-color: $bg-white;
+    padding-left: 0;
+    padding-right: 24px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+
+    @include tablet {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 36px;
+      padding-right: 38px;
+    }
+  }
+}
+
+.title__lines {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: $color-button;
+    right: 0;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    @include tablet {
+      left: 0;
+    }
+  }
+}

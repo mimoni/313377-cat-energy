@@ -5,14 +5,17 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var sourcemaps = require('gulp-sourcemaps');
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
   return gulp.src("source/sass/main.scss")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: require('node-normalize-scss').includePaths
     }))
+    .pipe(sourcemaps.write())
     .pipe(postcss([
       autoprefixer()
     ]))

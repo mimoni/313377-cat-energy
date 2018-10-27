@@ -1,0 +1,41 @@
+.pick-program {
+  position: relative;
+  color: #ffffff;
+  padding-top: 25px;
+  font-family: $font-oswald;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    min-width: 320px;
+    height: 305px;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    color: $color-secondary-text;
+  }
+}
+
+.pick-program__title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.pick-program__subtitle {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}

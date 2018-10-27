@@ -1,5 +1,28 @@
 @import "normalize";
 @import "variables";
+@import "mixins";
 @import "fonts";
 @import "scaffolding";
 @import "util";
+@import "blocks/container";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/pick-program";
+@import "blocks/categories";
+@import "blocks/advantages";
+@import "blocks/before-after";
+@import "blocks/page-footer";
+@import "blocks/social";
+@import "blocks/copyright";
+@import "blocks/title";
+@import "blocks/slider";
+@import "blocks/button";
+
+// catalog.html
+@import "blocks/catalog";
+@import "blocks/more-products";
+@import "blocks/product";
+
+//form.html
+@import "blocks/selection";
+@import "blocks/form";
