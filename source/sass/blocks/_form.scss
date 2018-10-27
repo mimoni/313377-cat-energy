@@ -21,8 +21,15 @@
   }
 
   &--additionally {
+    margin-bottom: 34px;
+
+    @include tablet {
+      margin-bottom: 54px;
+    }
+
     @include desktop {
       display: flex;
+      margin-bottom: 60px;
     }
   }
 
@@ -43,6 +50,11 @@
   &--radio-group {
     border: 1px solid #e6e6e6;
 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
     @include tablet {
       padding-top: 24px;
       padding-bottom: 24px;
@@ -50,11 +62,19 @@
       padding-right: 27px;
     }
   }
+
+  &--name-group {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .form__col {
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
 
   @include tablet {
@@ -120,6 +140,97 @@
   margin-bottom: 14px;
   display: flex;
   align-items: center;
+  position: relative;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.form__label--radio,
+.form__label--checkbox {
+  padding-left: 46px;
+
+  @include tablet {
+    padding-left: 60px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  &::before {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    top: 9px;
+    left: 9px;
+
+    @include tablet {
+      width: 18px;
+      height: 18px;
+      top: 11px;
+      left: 11px;
+    }
+  }
+}
+
+.form__radio:checked + label::after,
+.form__radio:not(:checked):active + label::after {
+  background-color: #68b738;
+}
+
+.form__label--checkbox {
+  &::before {
+    border-radius: initial;
+  }
+
+  &::after {
+    width: 21px;
+    height: 16px;
+    border-radius: initial;
+    top: 7px;
+    left: 5px;
+
+    @include tablet {
+      top: 12px;
+      left: 10px;
+    }
+  }
+}
+
+.form__checkbox:checked + label::after,
+.form__checkbox:not(:checked):active + label::after {
+  background-color: transparent;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .form__submit {
