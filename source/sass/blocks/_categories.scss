@@ -10,45 +10,94 @@
 .categories__item {
   background-color: $bg-lightgrey;
   padding: 20px;
-  margin-top: 20px;
+  padding-bottom: 0;
+  margin-top: 25px;
 
   @include tablet {
     position: relative;
-    padding-top: 80px;
+    padding-top: 75px;
     padding-right: 270px;
-    padding-left: 50px;
-    padding-bottom: 60px;
+    padding-left: 52px;
+    padding-bottom: 45px;
   }
 
   @include desktop {
+    width: 570px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    padding-top: 77px;
+    padding-right: 55px;
+
     &:first-child {
-      margin-right: 80px;
+      margin-right: 20px;
     }
   }
 }
 
 .categories__link {
+  display: block;
   font-family: $font-oswald;
   color: $color-secondary-text;
+  position: relative;
   text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 20px;
+  text-decoration: none;
 
   @include tablet {
+    border: none;
     font-size: 20px;
+    line-height: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-left: 22px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 11px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-position: center;
+  }
+
+  &:hover::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    width: 33px;
+    height: 11px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .categories__title {
+  color: $color-secondary-text;
   font-family: $font-oswald;
   font-size: 24px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+  line-height: 37px;
 
   @include tablet {
     font-size: 36px;
-    text-transform: uppercase;
+  }
+
+  @include desktop {
+    padding-left: 161px;
+    padding-bottom: 48px;
+    width: auto;
   }
 }
 
@@ -64,9 +113,17 @@
     width: 200px;
     height: 200px;
     position: absolute;
-    top: 80px;
-    right: 50px;
+    top: 92px;
+    right: 62px;
     margin: 0;
+  }
+
+  @include desktop {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
+    right: initial;
   }
 
   &--cat1::after {
@@ -77,10 +134,24 @@
     background-image: url("../img/icon-cat-slim.svg");
     background-position: center center;
     background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    right: -10px;
 
     @include tablet {
       width: 140px;
       height: 194px;
+      top: -13px;
+      right: -29px;
+    }
+
+    @include desktop {
+      width: 70px;
+      height: 97px;
+      position: absolute;
+      left: 13px;
+      top: -5px;
+      right: initial;
     }
   }
 
@@ -92,17 +163,50 @@
     background-image: url("../img/icon-cat-pro.svg");
     background-position: center center;
     background-repeat: no-repeat;
+    position: relative;
+    top: 12px;
+    right: 7px;
 
     @include tablet {
       width: 268px;
       height: 112px;
+      top: 46px;
+      right: 34px;
+    }
+
+    @include desktop {
+      width: 134px;
+      height: 56px;
+      position: absolute;
+      left: -19px;
+      top: 23px;
+      right: initial;
     }
   }
 }
 
 .categories__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+
   @include tablet {
-    margin-top: 35px;
-    margin-bottom: 62px;
+    margin-top: 0;
+    margin-bottom: 36px;
+    padding-right: 10px;
+  }
+
+  @include desktop {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  &--right-padding {
+    @include tablet {
+      padding-right: 42px;
+    }
+
+    @include desktop {
+      padding-right: 0;
+    }
   }
 }

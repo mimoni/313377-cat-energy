@@ -1,9 +1,16 @@
 .more-products__list {
   @include list-reset;
-  margin-bottom: 40px;
+
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 38px;
+
+  @include tablet {
+    margin-bottom: 69px;
+  }
 
   @include desktop {
     margin-right: 80px;
+    margin-bottom: 0;
     width: 895/1220*100%;
   }
 }
@@ -31,6 +38,19 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .more-products__item {
@@ -41,15 +61,23 @@
   @include tablet {
     padding-right: 38px;
     padding-left: 38px;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   @include desktop {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid #cdcdcd;
+    border-right: none;
+    border-left: none;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 16px;
   }
 }
 
@@ -59,14 +87,21 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+
+  @include tablet {
+    display: flex;
+    margin-bottom: 75px;
+  }
 
   @include desktop {
     width: 245/1220*100%;
+    margin-bottom: 0;
   }
 }
 
 .more-products__gift-slogan {
+  position: relative;
   box-sizing: border-box;
   color: $color-white-text;
   height: 289px;
@@ -77,15 +112,98 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 55px;
+    height: 60px;
+    transform: translateX(-50%);
+    background-image: url("../img/icon-gift.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    text-align: left;
+    padding-left: 0;
+    padding-top: 72px;
+    padding-bottom: 68px;
+    height: auto;
+    margin-left: 424px;
+
+    &::after {
+      left: -332px;
+      transform: none;
+    }
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 186px;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .more-products__button {
   max-width: 100%;
+
+  @include tablet {
+    margin-top: 12px;
+    margin-bottom: 27px;
+  }
+
+  @include desktop {
+    width: 245px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .more-products__wrap-col {
   @include desktop {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 88px;
+  }
+}
+
+.more-products__parameters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+}
+
+.more-products__weight {
+  @include tablet {
+    margin-right: 50px;
+  }
+
+  @include desktop {
+    width: 195px;
+    text-align: left;
   }
 }

@@ -1,7 +1,7 @@
 .pick-program {
   position: relative;
   color: #ffffff;
-  padding-top: 25px;
+  padding-top: 0;
   font-family: $font-oswald;
 
   &::before {
@@ -30,12 +30,62 @@
   text-align: center;
   font-size: 36px;
   line-height: 36px;
+  padding-top: 30px;
+  margin-bottom: 22px;
   margin-top: 0;
-  margin-bottom: 18px;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 45px;
+    padding-right: 55px;
+    text-align: left;
+    margin-left: 85px;
+    margin-bottom: 42px;
+  }
+
+  @include desktop {
+    width: 430px;
+    padding-top: 80px;
+    margin-left: 0;
+  }
 }
 
 .pick-program__subtitle {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 26px;
+
+  @include tablet {
+    margin-top: 0;
+    text-align: left;
+    margin-left: 88px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 48px;
+  }
+
+  @include desktop {
+    margin-left: 0;
+    margin-bottom: 52px;
+  }
+}
+
+.pick-program__image {
+  @include tablet {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 708px;
+    height: 609px;
+    z-index: -1;
+  }
+
+  @include desktop {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    left: 370px;
+    top: 0;
+  }
 }

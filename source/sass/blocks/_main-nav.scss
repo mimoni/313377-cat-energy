@@ -17,6 +17,37 @@
   margin-left: 40px;
   text-decoration: none;
   color: #222222;
+
+  @include tablet {
+    margin-left: 35px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background-color: #68b738;
+      bottom: -10px;
+      left: 0;
+    }
+  }
 }
 
 .main-nav__toggle {
@@ -29,5 +60,17 @@
 
   @include tablet {
     display: none;
+  }
+}
+
+.page-index .main-nav__link {
+  color: $bg-white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &--active::after {
+    background-color: $bg-white;
   }
 }

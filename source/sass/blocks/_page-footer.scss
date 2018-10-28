@@ -36,13 +36,36 @@
 
   .page-index & {
     background-color: $bg-white;
+
+    @include desktop {
+      background-color: transparent;
+    }
+  }
+}
+
+.page-index {
+  position: relative;
+
+  &::before {
+    @include desktop {
+      content: "";
+      position: absolute;
+      width: 50%;
+      left: 50%;
+      //transform: translateX(-50%);
+      background-color: #5eaa2f;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: cover;
+      height: 696px;
+      z-index: -1;
+    }
   }
 }
 
 .page-footer__contacts {
   display: flex;
   margin: 0 auto;
-
+  justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 22px;
   padding-left: 20px;
@@ -50,17 +73,20 @@
 
   @include tablet {
     padding-top: 65px;
-    padding-bottom: 60px;
-    padding-left: 75px;
-    padding-right: 90px;
-    width: 708px;
+    padding-bottom: 58px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 628px;
   }
 
   @include desktop {
     width: 570px;
+    justify-content: flex-start;
     box-sizing: border-box;
     background-color: $bg-white;
     margin-left: 0;
+    padding-top: 62px;
+    padding-left: 75px;
   }
 }
 
@@ -70,6 +96,21 @@
   font-family: $font-oswald;
   color: $color-secondary-text;
   width: 50%;
+  margin-right: 10px;
+
+  & br {
+    display: none;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 25px;
+    width: 160px;
+
+    & br {
+      display: block;
+    }
+  }
 
   @include desktop {
     margin-right: 80px;
@@ -78,24 +119,27 @@
 
 .page-footer__address {
   width: 50%;
+
+  @include tablet {
+    line-height: 20px;
+    width: 170px;
+    text-align: right;
+  }
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.page-footer__city {
+  @include tablet {
+    display: inline-block;
+    margin-top: 18px;
+  }
 }
 
 .page-footer__map {
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 55px;
-    height: 53px;
-    background-image: url("../img/map-pin.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    transform: translate(-50%, -50%);
-  }
 
   @include desktop {
     height: 400px;
@@ -105,8 +149,23 @@
 .page-footer__logo-link {
   display: block;
   text-align: center;
-  padding: 40px;
-  padding-bottom: 31px;
+  padding: 46px;
+  padding-bottom: 28px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 60px;
+    padding-bottom: 54px;
+  }
 }
 
 .page-footer__copyright {
@@ -115,13 +174,14 @@
   align-items: center;
 }
 
-.copyright__logo-link {
-  margin-top: 22px;
-  margin-bottom: 22px;
-}
-
-.page-footer__map-image {
+.page-footer__yandex-map {
   display: block;
+  width: 100%;
+  height: 362px;
+
+  @include tablet {
+    height: 400px;
+  }
 
   @include desktop {
     position: absolute;

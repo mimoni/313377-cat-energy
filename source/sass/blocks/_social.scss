@@ -8,6 +8,9 @@
 
   @include tablet {
     border: none;
+    justify-content: space-between;
+    width: 125px;
+    margin-left: 15px;
   }
 }
 
@@ -18,6 +21,11 @@
   &:nth-child(2) {
     margin-left: 40px;
     margin-right: 40px;
+
+    @include tablet {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
 
@@ -25,21 +33,29 @@
   content: "";
   display: block;
 
-  &--vk {
-    width: 22px;
-    height: 12px;
-    background-image: url("../img/icon-vk-mobile.svg");
+  &:hover {
+    fill: #68b738;
   }
 
-  &--instagram {
-    width: 16px;
-    height: 16px;
-    background-image: url("../img/icon-insta-mobile.svg");
+  &:active {
+    fill: #68b738;
+    opacity: 0.3;
   }
 
-  &--facebook {
-    width: 10px;
-    height: 19px;
-    background-image: url("../img/icon-fb-mobile.svg");
+  @include tablet {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--facebook {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
   }
 }

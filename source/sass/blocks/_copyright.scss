@@ -6,4 +6,37 @@
 
 .copyright__text {
   font-size: 16px;
+  text-decoration: none;
+  color: $color-primary-text;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    margin-right: 10px;
+  }
+}
+
+.copyright__logo-image {
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo-link {
+  margin-top: 15px;
+  margin-bottom: 16px;
+  margin-right: -8px;
+
+  @include tablet {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
