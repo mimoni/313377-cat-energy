@@ -3,10 +3,8 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 11px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 12px;
-  border: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 
   @include tablet {
     border: none;

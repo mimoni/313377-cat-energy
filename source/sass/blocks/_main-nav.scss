@@ -22,7 +22,7 @@
     margin-left: 35px;
   }
 
-  @include  desktop {
+  @include desktop {
     font-size: 20px;
     line-height: 25px;
   }
@@ -60,5 +60,17 @@
 
   @include tablet {
     display: none;
+  }
+}
+
+.page-index .main-nav__link {
+  color: $bg-white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &--active::after {
+    background-color: $bg-white;
   }
 }

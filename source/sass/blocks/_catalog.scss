@@ -16,6 +16,9 @@
 
 .catalog__item {
   border-top: 1px solid #ededed;
+  margin-bottom: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @include tablet {
     border: none;
@@ -23,12 +26,20 @@
     padding-right: 30px;
     width: 50%;
     box-sizing: border-box;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
   }
 
   @include desktop {
     padding-right: 40px;
     padding-left: 40px;
     width: 25%;
+  }
+}
+
+.catalog__title {
+  margin-top: 30px;
+
+  @include tablet {
+    margin-top: 45px;
   }
 }

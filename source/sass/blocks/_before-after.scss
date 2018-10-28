@@ -3,33 +3,47 @@
   background-color: $bg-lightgrey;
 
   @include tablet {
-    background-image: linear-gradient(to top, $bg-lightgrey 460px, $bg-white 460px);
+    background-image: linear-gradient(90deg, #f2f2f2 50%, #eaeaea 50%),
+    linear-gradient(90deg, #fff 50%, #ffffff 50%);
+    background-repeat: no-repeat;
+    background-size: 100% 460px, 100%;
+    background-position-y: bottom;
+    margin-bottom: 5px;
   }
 
   @include desktop {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 60px;
-  }
-}
-
-.before-after__text {
-  @include tablet {
-    margin-bottom: 55px;
+    padding-top: 5px;
+    background-image: linear-gradient(90deg, #f2f2f2 50%, #f2f2f2 50%);
+    background-size: 100% 460px;
+    background-position-y: bottom;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    background-color: transparent;
   }
 }
 
 .before-after__results {
+  color: $color-secondary-text;
+
   @include list-reset;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
 }
 
 .before-after__wrapper-results {
   @include tablet {
     display: flex;
     justify-content: space-between;
+  }
+  @include desktop {
+    display: block;
   }
 }
 
@@ -53,6 +67,14 @@
   margin: 0;
   margin-top: 15px;
   margin-bottom: 15px;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 37px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 160px;
+  }
 }
 
 .before-after__caption {
@@ -72,6 +94,16 @@
 
   @include tablet {
     background-color: $bg-white;
+    font-size: 14px;
+    line-height: 14px;
+    width: 118px;
+    bottom: -7px;
+
+    &--second {
+      width: 138px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
   }
 
   @include desktop {
@@ -84,6 +116,7 @@
 }
 
 .before-after__cost {
+  color: $color-secondary-text;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -96,14 +129,28 @@
     line-height: 20px;
     text-align: right;
     width: 190px;
+    margin-top: 25px;
+    margin-bottom: 34px;
+  }
+
+  @include desktop {
+    width: auto;
+    text-align: left;
+    margin-top: 60px;
   }
 }
 
 .before-after__slider {
-  margin-top: 46px;
+  margin-top: 34px;
+
+  @include tablet {
+    margin-top: 76px;
+  }
 
   @include desktop {
-    flex-grow: 1;
+    margin-top: 10px;
+    width: 610px;
+    max-width: 610px;
   }
 }
 
@@ -122,8 +169,8 @@
   @include desktop {
     margin: 0;
     padding: 0;
-    margin-right: 40px;
-    width: 570px;
+    margin-right: auto;
+    width: 440px;
   }
 }
 
@@ -134,5 +181,40 @@
     padding-left: 20px;
     padding-right: 20px;
     width: 1220px;
+    justify-content: space-between;
+  }
+}
+
+.before-after__title {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  color: $color-secondary-text;
+
+  @include tablet {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 46px;
+    margin-bottom: 64px;
+  }
+
+  @include desktop {
+    border: none;
+    padding-top: 0;
+    margin-top: 64px;
+    margin-bottom: 146px;
+  }
+}
+
+.before-after__text {
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-right: 10px;
+
+  @include tablet {
+    margin-bottom: 55px;
+  }
+
+  @include desktop {
+    line-height: 24px;
+    margin-bottom: 67px;
   }
 }

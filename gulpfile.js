@@ -11,11 +11,11 @@ var server = require("browser-sync").create();
 gulp.task("css", function () {
   return gulp.src("source/sass/main.scss")
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: require('node-normalize-scss').includePaths
     }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(postcss([
       autoprefixer()
     ]))
