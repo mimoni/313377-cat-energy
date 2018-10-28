@@ -8,8 +8,12 @@
 </head>
 <body class="page-form">
 <header class="page-header container">
-  <a class="page-header__logo-link" href="#">
-    <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy" width="190" height="38">
+  <a class="page-header__logo-link" href="index.html">
+    <picture>
+      <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Cat Energy">
+    </picture>
   </a>
 
   <nav class="main-nav">
@@ -26,7 +30,7 @@
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--active" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </div>
@@ -75,15 +79,23 @@
       <div class="container">
         <div class="form__group form__group--contacts">
           <label class="form__label">E-mail:*
-            <input class="form__input form__input--email" type="text" name="email" value="kuklachev@gmail.com" required>
+            <input class="form__input form__input--email" type="email" name="email" value="kuklachev@gmail.com" required>
+
+            <svg class="form__input__icon-mail" width="17" height="13">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
           </label>
-          <label class="form__label">Телефон:*
-            <input class="form__input form__input--phone" type="text" name="phone" value="8 (960) 900-60-90" required>
+          <label class="form__label form__label--phone">Телефон:*
+            <input class="form__input form__input--phone" type="tel" name="phone" value="8 (960) 900-60-90" required>
+
+            <svg class="form__input__icon-phone" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
           </label>
         </div>
       </div>
 
-      <div class="title__lines">
+      <div class="title__lines title__lines--comments-margin">
         <div class="container">
           <h2 class="title title--white-bg">Комментарий</h2>
         </div>
@@ -91,12 +103,11 @@
 
       <div class="container">
         <div class="form__group">
-        <textarea class="form__textarea" name="description" id="description" cols="30" rows="10">Расскажите обо всех повадках кота
-        </textarea>
+        <textarea class="form__textarea" name="description" id="description" cols="30" rows="7">Расскажите обо всех повадках кота</textarea>
         </div>
       </div>
 
-      <div class="title__lines">
+      <div class="title__lines title__lines--additionally-margin">
         <div class="container">
           <h2 class="title title--white-bg">Дополнительно</h2>
         </div>
@@ -104,7 +115,8 @@
 
       <div class="container">
         <div class="form__group form__group--additionally">
-          <input class="form__checkbox visually-hidden" id="additionally-sweetener" type="checkbox" name="additionally" value="sweetener" checked>
+          <input class="form__checkbox visually-hidden" id="additionally-sweetener" type="checkbox" name="additionally" value="sweetener"
+                 checked>
           <label class="form__label form__label--checkbox" for="additionally-sweetener">Сахарозаменитель</label>
 
           <input class="form__checkbox visually-hidden" id="additionally-water" type="checkbox" name="additionally" value="water">
@@ -132,15 +144,15 @@
     <div class="page-footer__contacts-wrap">
       <div class="page-footer__contacts">
         <div class="page-footer__slogan">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем <br> к сотрудничеству дилеров!
         </div>
         <div class="page-footer__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span>
         </div>
       </div>
     </div>
 
-    <img class="page-footer__map-image" src="img/bg-map-mobile@1x.png" alt="Карта" width="320" height="400">
+    <div class="page-footer__yandex-map" id="map"></div>
   </div>
 
   <div class="page-footer__bg-wrap">
@@ -152,27 +164,53 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Мы в Вконтакте</span></a>
+            <a class="social__link" href="https://vk.com/htmlacademy">
+              <svg class="social__link--vk" width="22" height="12">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+
+              <span class="visually-hidden">Мы в Вконтакте</span>
+            </a>
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
+            <a class="social__link" href="https://www.instagram.com/htmlacademy/">
+              <svg class="social__link--instagram" width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>
+
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+            <a class="social__link" href="https://www.facebook.com/htmlacademy">
+              <svg class="social__link--facebook" width="10" height="19">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
           </li>
         </ul>
       </div>
 
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">HTML Academy</p>
-        <a href="#" class="copyright__logo-link">
-          <img class="copyright__logo-image" src="img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__text">HTML Academy</a>
+
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
+
+          <svg class="copyright__logo-image" width="44" height="44">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
   </div>
 </footer>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=f99ef674-e7f9-421d-ae32-4bae299b17f2&lang=ru_RU" type="text/javascript"></script>
+<script src="js/map.js"></script>
+<script src="js/picturefill.min.js"></script>
+<script src="js/svg4everybody.min.js"></script>
 </body>
 </html>

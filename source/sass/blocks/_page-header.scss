@@ -2,12 +2,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 11px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
+  border: 1px solid #e6e6e6;
+
+  @include tablet {
+    border: none;
+    padding-top: 25px;
+  }
+
+  @include desktop {
+    padding-top: 56px;
+    padding-bottom: 28px;
+  }
 }
 
 .page-header__logo-image {
   display: block;
+
+  @include tablet {
+    width: 173px;
+    height: 58px;
+  }
+
+  @include desktop {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.page-header__logo-link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
