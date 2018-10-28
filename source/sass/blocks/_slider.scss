@@ -51,7 +51,6 @@
   padding-bottom: 31px;
 
   @include tablet {
-    padding-bottom: 38px;
     padding-bottom: 71px;
   }
 
@@ -157,19 +156,19 @@
       top: 50%;
       left: 50%;
       position: absolute;
-      background-color: #68B738;
+      background-color: #68b738;
       border-radius: 50%;
       transform: translate(-50%, -50%);
     }
 
     &:hover {
-      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
       cursor: pointer;
     }
 
     &:active {
       border: 2px solid #68b738;
-      box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
   }
 }
