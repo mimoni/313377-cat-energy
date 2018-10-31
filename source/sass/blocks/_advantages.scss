@@ -70,6 +70,7 @@
   min-width: 60px;
   height: 60px;
   margin-right: 20px;
+  background-size: cover;
 
   @include tablet {
     width: 80px;
@@ -78,18 +79,34 @@
 
   &--leaf {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--powder {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--fork {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--clock {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 

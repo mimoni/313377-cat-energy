@@ -16,6 +16,10 @@
     height: 305px;
     background-image: url("../img/index-background-mobile@1x.jpg");
 
+    @include retina {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+
     @include tablet {
       display: none;
     }
@@ -54,7 +58,7 @@
 .pick-program__subtitle {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 
   @include tablet {
     margin-top: 0;

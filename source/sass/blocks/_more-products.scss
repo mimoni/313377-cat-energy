@@ -89,14 +89,28 @@
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   margin-bottom: 36px;
 
+  @include retina {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
   @include tablet {
     display: flex;
     margin-bottom: 75px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @include desktop {
     width: 245/1220*100%;
     margin-bottom: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 

@@ -2,6 +2,7 @@
   position: relative;
   width: 320px;
   height: 240px;
+  margin: 0 auto;
 
   @include tablet {
     margin: 0 auto;
@@ -10,6 +11,7 @@
   }
 
   @include desktop {
+    margin-left: 24px;
     width: 610px;
     height: 517px;
   }
@@ -28,17 +30,29 @@
   &--right {
     background-image: url("../img/before-mobile@1x.png");
 
+    @include retina {
+      background-image: url("../img/before-mobile@2x.png");
+    }
+
     @include tablet {
       background-image: url("../img/before-tablet@1x.png");
       width: 677px;
       height: 499px;
+
+      @include retina {
+        background-image: url("../img/before-tablet@2x.png");
+      }
     }
 
     @include desktop {
-      background-image: url("../img/before-desktop2@1x.png");
+      background-image: url("../img/before-desktop@2x.png");
       width: 610px;
       height: 517px;
       margin-left: -24px;
+
+      @include retina {
+        background-image: url("../img/before-desktop@2x.png");
+      }
     }
   }
 }
@@ -70,13 +84,14 @@
   position: relative;
   padding-left: 0;
   padding-right: 0;
-  margin-left: 6px;
-  margin-right: 6px;
+
 
   @include tablet {
     cursor: pointer;
     font-size: 20px;
     line-height: 20px;
+    margin-left: 6px;
+    margin-right: 6px;
 
     &::after {
       content: "";
