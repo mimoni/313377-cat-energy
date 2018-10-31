@@ -11,7 +11,7 @@
   background-color: $bg-lightgrey;
   padding: 20px;
   padding-bottom: 0;
-  margin-top: 25px;
+  margin-top: 24px;
 
   @include tablet {
     position: relative;
@@ -58,13 +58,17 @@
     content: "";
     position: absolute;
     top: 50%;
-    margin-left: 22px;
+    margin-left: 14px;
     transform: translateY(-50%);
     width: 24px;
     height: 11px;
     background-repeat: no-repeat;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-position: center;
+
+    @include tablet {
+      margin-left: 22px;
+    }
   }
 
   &:hover::after {
