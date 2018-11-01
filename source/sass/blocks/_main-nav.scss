@@ -1,3 +1,9 @@
+.page-index .main-nav {
+  @include desktop {
+    width: 50%;
+  }
+}
+
 .main-nav__list {
   @include list-reset;
   display: none;
@@ -64,13 +70,16 @@
 }
 
 .page-index .main-nav__link {
-  color: $bg-white;
+  @include desktop {
 
-  &:hover {
-    opacity: 0.6;
-  }
+    color: $bg-white;
 
-  &--active::after {
-    background-color: $bg-white;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &--active::after {
+      background-color: $bg-white;
+    }
   }
 }
