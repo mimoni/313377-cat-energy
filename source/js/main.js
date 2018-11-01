@@ -3,7 +3,10 @@
 ymaps.ready(init);
 
 function init() {
-  var map = new ymaps.Map("map", {
+  var mapEl = document.querySelector('#map');
+  mapEl.classList.remove('no-js');
+
+  var map = new ymaps.Map(mapEl, {
     center: [59.938631, 30.323055],
     zoom: 17,
     controls: []
@@ -24,3 +27,20 @@ function init() {
 
   //map.setCenter([59.938631, 30.319390],17) //desktop
 }
+
+(function () {
+  var menu = document.querySelector('.main-nav');
+  var button = menu.querySelector('.main-nav__toggle');
+
+  menu.classList.remove('main-nav--open');
+
+  button.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    if (menu.classList.contains('main-nav--open')) {
+      menu.classList.remove('main-nav--open');
+    } else {
+      menu.classList.add('main-nav--open');
+    }
+  });
+})();

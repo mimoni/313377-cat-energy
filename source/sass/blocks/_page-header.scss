@@ -1,19 +1,27 @@
 .page-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 11px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0;
   border-bottom: 1px solid #e6e6e6;
 
   @include tablet {
     border: none;
     padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 12px;
+    width: 708px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include desktop {
     padding-top: 56px;
     padding-bottom: 28px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 1220px;
   }
 }
 
@@ -32,6 +40,10 @@
 }
 
 .page-header__logo-link {
+  @include mobile-only {
+    margin-bottom: 12px;
+  }
+
   &:hover {
     opacity: 0.8;
   }

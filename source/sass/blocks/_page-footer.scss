@@ -149,6 +149,59 @@
   }
 }
 
+.page-footer__yandex-map {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/bg-map-mobile@1x.png");
+
+  @include retina {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+
+  @include tablet {
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+  }
+
+  @include desktop {
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
+  }
+}
+
+.no-js.page-footer__yandex-map {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55px;
+    height: 53px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/map-pin.png");
+    transform: translate(-50%, -50%);
+
+    @include tablet {
+      width: 113px;
+      height: 106px;
+    }
+
+    @include desktop {
+      left: 74%;
+    }
+  }
+}
+
 .page-footer__logo-link {
   display: block;
   text-align: center;
