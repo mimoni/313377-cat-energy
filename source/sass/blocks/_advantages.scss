@@ -20,6 +20,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
 
   @include tablet {
     position: relative;
@@ -62,51 +63,58 @@
   }
 }
 
-.advantages__icon {
+.advantages__item::before {
+  content: "";
+  display: block;
   background-color: #68b738;
   background-repeat: no-repeat;
   background-position: center center;
   width: 60px;
   min-width: 60px;
   height: 60px;
-  margin-right: 20px;
   background-size: cover;
+  left: 0;
+  top: 0;
 
   @include tablet {
     width: 80px;
     height: 80px;
   }
+}
 
-  &--leaf {
-    background-image: url("../img/advantage-leaf@1x.png");
+.advantages__item--leaf::before {
+  background-size: 26px 29px;
+  background-image: url("../img/advantage-leaf@1x.png");
 
-    @include retina {
-      background-image: url("../img/advantage-leaf@2x.png");
-    }
+  @include retina {
+    background-image: url("../img/advantage-leaf@2x.png");
   }
+}
 
-  &--powder {
-    background-image: url("../img/advantage-powder@1x.png");
+.advantages__item--powder::before {
+  background-size: 29px 31px;
+  background-image: url("../img/advantage-powder@1x.png");
 
-    @include retina {
-      background-image: url("../img/advantage-powder@2x.png");
-    }
+  @include retina {
+    background-image: url("../img/advantage-powder@2x.png");
   }
+}
 
-  &--fork {
-    background-image: url("../img/advantage-dining@1x.png");
+.advantages__item--fork::before {
+  background-size: 23px 30px;
+  background-image: url("../img/advantage-dining@1x.png");
 
-    @include retina {
-      background-image: url("../img/advantage-dining@2x.png");
-    }
+  @include retina {
+    background-image: url("../img/advantage-dining@2x.png");
   }
+}
 
-  &--clock {
-    background-image: url("../img/advantage-clock@1x.png");
+.advantages__item--clock::before {
+  background-size: 26px 31px;
+  background-image: url("../img/advantage-clock@1x.png");
 
-    @include retina {
-      background-image: url("../img/advantage-clock@2x.png");
-    }
+  @include retina {
+    background-image: url("../img/advantage-clock@2x.png");
   }
 }
 
@@ -126,9 +134,11 @@
 .advantages__text {
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 20px;
 
   @include tablet {
     margin-top: 32px;
+    margin-left: 0;
     line-height: 24px;
     width: 245px;
   }

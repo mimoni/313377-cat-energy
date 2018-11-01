@@ -150,6 +150,9 @@
 }
 
 .page-footer__yandex-map {
+  display: block;
+  width: 100%;
+  height: 362px;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -161,6 +164,7 @@
   }
 
   @include tablet {
+    height: 400px;
     background-image: url("../img/bg-map-tablet@1x.png");
 
     @include retina {
@@ -169,6 +173,11 @@
   }
 
   @include desktop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-image: url("../img/bg-map-desktop@1x.png");
 
     @include retina {
@@ -228,22 +237,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.page-footer__yandex-map {
-  display: block;
-  width: 100%;
-  height: 362px;
-
-  @include tablet {
-    height: 400px;
-  }
-
-  @include desktop {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
 }
