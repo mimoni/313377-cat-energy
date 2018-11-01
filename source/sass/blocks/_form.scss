@@ -332,6 +332,11 @@
   opacity: 0.3;
 }
 
+.form__checkbox:focus + label,
+.form__radio:focus + label {
+  outline: #fdc305 solid 2px;
+}
+
 .form__label--checkbox {
   margin-bottom: 10px;
 
